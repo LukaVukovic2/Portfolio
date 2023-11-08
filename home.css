@@ -21,14 +21,26 @@
 }
 
 /* navigation bar */
+.navbar-collapse{
+  display: inline-block;
+}
+
+ul{
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nested-link-container li{
+  text-align: center;
+  display: inline-block;
+}
 
 .nav-links-container{
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  margin-top: 20px;
 }
 
 .nested-link-container{
@@ -57,18 +69,27 @@ a{
   color: #007bff;
 }
 
-.contact-link, .github-link{
+.contact-link, .github-link, .certification-link{
   color: #007bff;
 }
 
-i:hover{
-  color: white;
+.contact-link{
+  border: 1.6px solid #007bff;
 }
 
-.contact-link:hover, .github-link:hover, .visit-website-link:hover{
+.contact-link:hover, .github-link:hover, .visit-website-link:hover, .certification-link:hover{
   text-decoration: none;
   color: white;
   background-color: #007bff;
+}
+
+.footer-icon{
+  color: white;
+}
+
+.footer-icon:hover{
+  background-color: white;
+  color: #007bff;
 }
 
 .github-link{
@@ -99,18 +120,24 @@ h1{
   color: white;
 }
 
-.skills{
+.skills-section{
   margin-top: -200px;
   background-color: white;
   border-radius: 10px;
+  padding: 40px 20px;
+}
+
+.skill-icon{
+  margin-bottom: 20px;
 }
 
 .projects-section{
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .form-section{
-  padding: 80px;
+  margin-top: 50px;
+  padding: 40px 80px 0;
 }
 
 .img{
@@ -124,13 +151,6 @@ h1{
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  height: 200px;
-}
-
-@media (max-width:768px){
-  .project-div{
-    width: 100%;
-  }
 }
 
 .project-description{
@@ -142,6 +162,52 @@ h1{
 
 h4{
   padding: 0 20px;
+}
+
+.project-div:hover .project-description{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project-div:hover{
+  background-color: #141c3a;
+  color: white;
+}
+
+.project-div:hover img{
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.project-skills-list{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: lightgrey;
+  font-size: 12px;
+}
+
+span{
+  color: #007bff;
+  font-weight: bold;
+}
+
+.form-section input{
+  line-height: 40px;
+}
+
+footer{
+  background-color: #007bff;
+  color: white;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+@media (max-width:768px){
+  .project-div{
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px){
@@ -158,38 +224,4 @@ h4{
   h4{
     font-size: 14px;
   }
-}
-
-.project-div:hover .project-description{
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.project-div:hover{
-  background-color: #141c3a;
-  color: white;
-}
-
-.project-div:hover{
-  opacity: 0;
-  transform: scale(1.2);
-}
-
-footer{
-  background-color: #007bff;
-  color: white;
-  padding: 20px 0;
-}
-
-.project-skills-list{
-  position: absolute;
-  bottom: 0;
-  right: 10px;
-  color: lightgrey;
-  font-size: 12px;
-}
-
-.form-section{
-  
 }
