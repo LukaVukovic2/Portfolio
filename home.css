@@ -1,0 +1,195 @@
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.body{
+  padding: 0 20px;
+}
+
+/* navigation bar */
+
+.nav-links-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nested-link-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 300px;
+}
+
+a{
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+}
+
+.contact-list-item{
+  padding: 0;
+}
+
+.nav-link:link, .nav-link:visited, .nav-link:hover, .nav-link:active{
+  color: black;
+}
+
+.nav-link:hover{
+  text-decoration: none;
+  color: #007bff;
+}
+
+.contact-link, .github-link{
+  color: #007bff;
+}
+
+i:hover{
+  color: white;
+}
+
+.contact-link:hover, .github-link:hover, .visit-website-link:hover{
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+}
+
+.github-link{
+  padding: 10px 20px;
+  margin: 50px 0;
+}
+
+.header{
+  padding: 30px 0;
+}
+
+h1{
+  font-family: "eurostile", sans-serif; font-weight: 800;
+}
+
+.desk-img{
+  max-width: 800px;
+}
+
+.avatar{
+  max-width: 400px;
+  margin-bottom: 50px;
+}
+
+.about-container{
+  background-color: #007bff;
+  padding: 100px 0 300px 0;
+  color: white;
+}
+
+.skills{
+  margin-top: -200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.projects-section{
+  margin-top: 100px;
+}
+
+.form-section{
+  padding: 80px;
+}
+
+.img{
+  width: 100%;
+  display: block;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.project-div{
+  width: 48%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 200px;
+}
+
+@media (max-width:768px){
+  .project-div{
+    width: 100%;
+  }
+}
+
+.project-description{
+  display: none;
+  position: absolute;
+  top: 0;
+  padding-top: 100px;
+}
+
+h4{
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+  .project-description{
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 400px){
+  .project-description{
+    padding-top: 20%;
+  }
+  
+  h4{
+    font-size: 14px;
+  }
+}
+
+.project-div:hover .project-description{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.project-div:hover{
+  background-color: #141c3a;
+  color: white;
+}
+
+.project-div:hover{
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+footer{
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+.project-skills-list{
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: lightgrey;
+  font-size: 12px;
+}
+
+.form-section{
+  
+}
