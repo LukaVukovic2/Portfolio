@@ -116,64 +116,52 @@ h1{
 .img{
   width: 100%;
   display: block;
-  transition: transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, background-image 0.5s;
 }
 
-.project-div{
+.project-div {
   width: 48%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 
-@media (max-width:768px){
-  .project-div{
-    width: 100%;
-  }
+.project-div:hover {
+  background-image: initial;
 }
 
-.project-description{
-  display: none;
-  position: absolute;
-  top: 0;
-  padding-top: 100px;
+.project-divv{
+  transition: opacity 0.3s, transform 0.3s;
 }
 
-h4{
-  padding: 0 20px;
-}
-
-@media (min-width: 768px) and (max-width: 992px){
-  .project-description{
-    padding-top: 50px;
-  }
-}
-
-@media (max-width: 400px){
-  .project-description{
-    padding-top: 20%;
-  }
-  
-  h4{
-    font-size: 14px;
-  }
+.project-divv:hover .project-bg-image{
+  background-image: none;
+  opacity: 0.5;
+  transform: scale(1.2);
 }
 
 .project-div:hover .project-description{
   display: block;
   height: 100%;
   width: 100%;
-}
-
-.project-div:hover{
   background-color: #141c3a;
   color: white;
 }
 
-.project-div:hover{
-  opacity: 0;
-  transform: scale(1.2);
+.project-div:hover .project-skills-list{
+  display: block;
+}
+
+.project-bg-image{
+  background-image: url('js-project.png');
+  height: 100%;
+  background-size: contain; 
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer{
@@ -183,6 +171,7 @@ footer{
 }
 
 .project-skills-list{
+  display: none;
   position: absolute;
   bottom: 0;
   right: 10px;
