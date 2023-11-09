@@ -20,6 +20,28 @@
   padding: 0 20px;
 }
 
+.subtitle{
+  letter-spacing: normal;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* fonts */
+
+body{
+  font-family: "europa", sans-serif;
+}
+
+h1, h2, h3, h5{
+  font-family: "eurostile", sans-serif; font-weight: 700;
+  letter-spacing: -1px;
+}
+
+h4{
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* navigation bar */
 .navbar-collapse{
   display: inline-block;
@@ -47,7 +69,10 @@ ul{
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  width: 300px;
+}
+
+.nested-link-container a{
+  display: inline-block;
 }
 
 a{
@@ -83,26 +108,8 @@ a{
   background-color: #007bff;
 }
 
-.footer-icon{
-  color: white;
-}
-
-.footer-icon:hover{
-  background-color: white;
-  color: #007bff;
-}
-
-.github-link{
-  padding: 10px 20px;
-  margin: 50px 0;
-}
-
 .header{
   padding: 30px 0;
-}
-
-h1{
-  font-family: "eurostile", sans-serif; font-weight: 800;
 }
 
 .desk-img{
@@ -114,17 +121,26 @@ h1{
   margin-bottom: 50px;
 }
 
-.about-container{
+.about-section{
   background-color: #007bff;
   padding: 100px 0 300px 0;
   color: white;
+}
+
+.about-container{
+  width: 50%;
 }
 
 .skills-section{
   margin-top: -200px;
   background-color: white;
   border-radius: 10px;
-  padding: 40px 20px;
+}
+
+.skill-center-div{
+  border: 1px solid rgb(231, 231, 233);
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .skill-icon{
@@ -140,42 +156,39 @@ h1{
   padding: 40px 80px 0;
 }
 
-.img{
+.img {
   width: 100%;
   display: block;
   transition: transform 0.5s, opacity 0.5s;
 }
 
-.project-div{
+.project-div {
   width: 48%;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  color: white;
+  background-color: #141c3a;
 }
 
-.project-description{
+.project-description {
   display: none;
   position: absolute;
   top: 0;
   padding-top: 100px;
 }
 
-h4{
+h4 {
   padding: 0 20px;
 }
 
-.project-div:hover .project-description{
+.project-div:hover .project-description {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-.project-div:hover{
-  background-color: #141c3a;
-  color: white;
-}
-
-.project-div:hover img{
+.project-div:hover img {
   opacity: 0;
   transform: scale(1.2);
 }
@@ -197,6 +210,21 @@ span{
   line-height: 40px;
 }
 
+
+.github-link{
+  padding: 10px 20px;
+  margin: 50px 0;
+}
+
+.footer-icon{
+  color: white;
+}
+
+.footer-icon:hover{
+  background-color: white;
+  color: #007bff;
+}
+
 footer{
   background-color: #007bff;
   color: white;
@@ -207,6 +235,31 @@ footer{
 @media (max-width:768px){
   .project-div{
     width: 100%;
+  }
+
+  .nav-sections-container{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .about-container{
+    width: 75%;
+  }
+
+  .skill{
+    padding: 40px;
+  }
+
+  .skills-section > .skill:not(:last-child){
+    border-bottom: 1px solid rgb(207, 212, 218);
+  }
+
+  .skill-center-div{
+    border: 0;
+  }
+
+  .form-section{
+    padding: 40px;
   }
 }
 
